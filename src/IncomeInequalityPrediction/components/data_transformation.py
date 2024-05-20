@@ -11,6 +11,7 @@ from src.IncomeInequalityPrediction.exception import customexception
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, RobustScaler
+from imblearn.over_sampling import SMOTE
 
 from src.IncomeInequalityPrediction.utils.utils import save_object
 
@@ -37,11 +38,7 @@ class DataTransformation:
             numerical_cols = ['age', 'employment_stat', 'wage_per_hour', 'working_week_per_year',
                 'industry_code', 'occupation_code', 'total_employed', 'vet_benefit',
                 'gains', 'losses', 'stocks_status', 'mig_year', 'importance_of_record']
-            
-            # Define the custom ranking for each ordinal variable
-            cut_categories = ['Fair', 'Good', 'Very Good','Premium','Ideal']
-            color_categories = ['D', 'E', 'F', 'G', 'H', 'I', 'J']
-            clarity_categories = ['I1','SI2','SI1','VS2','VS1','VVS2','VVS1','IF']
+
             
             logging.info('Pipeline Initiated')
             
@@ -89,8 +86,14 @@ class DataTransformation:
             
             preprocessing_obj = self.get_data_transformation()
             
-            target_column_name = 'price'
-            drop_columns = [target_column_name,'id']
+            target_column_name = 'income_above_limit'
+            cols_to_drop = ['id', 'class', 'education_institute', 'unemployment_reason', 'is_labor_union', 
+                            'occupation_code_main', 'under_18_family', 'veterans_admin_questionnaire', 
+                            'residence_1_year_ago', 'old_residence_reg', 'old_residence_state',
+                            "migration_code_change_in_msa","migration_prev_sunbelt","migration_code_move_within_reg",
+                            "migration_code_change_in_reg", 'country_of_birth_own','country_of_birth_father','country_of_birth_mother',
+                            'household_stat']
+            drop_columns = [target_column_name, cols_to_drop]
             
             input_feature_train_df = train_df.drop(columns=drop_columns,axis=1)
             target_feature_train_df=train_df[target_column_name]
@@ -104,6 +107,11 @@ class DataTransformation:
             input_feature_test_arr=preprocessing_obj.transform(input_feature_test_df)
             
             logging.info("Applying preprocessing object on training and testing datasets.")
+
+            smote = SMOTE(random_state=42)
+            input_feature_train_arr, target_feature_train_df = smote.fit_resample(input_feature_train_arr, target_feature_train_df)
+
+            logging.info("Resampling of the data completed using SMOTE.")
             
             train_arr = np.c_[input_feature_train_arr, np.array(target_feature_train_df)]
             test_arr = np.c_[input_feature_test_arr, np.array(target_feature_test_df)]
