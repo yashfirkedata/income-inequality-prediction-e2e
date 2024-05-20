@@ -9,5 +9,6 @@ dvc
 apache-airflow
 xgboost
 squarify
+imblearn
 
 -e .
