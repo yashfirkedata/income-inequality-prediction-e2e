@@ -55,3 +55,8 @@ class DataIngestion:
         except Exception as e:
            logging.info("exception during occured at data ingestion stage")
            raise customexception(e,sys)
+
+# # try if the code runs without any error
+# if __name__=="__main__":
+#     data_ingestion=DataIngestion()
+#     data_ingestion.initiate_data_ingestion()

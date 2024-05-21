@@ -45,15 +45,14 @@ class DataTransformation:
             ## Numerical Pipeline
             num_pipeline=Pipeline(
                 steps=[
-                    ('scaler', RobustScaler())
+                    ('scaler', RobustScaler(with_centering=False))
                 ]
             )
             
             # Categorigal Pipeline
             cat_pipeline=Pipeline(
                 steps=[
-                ('onehot',OneHotEncoder(sparse_output=False))
-                ('scaler',RobustScaler())
+                ('onehot',OneHotEncoder(handle_unknown='ignore',sparse_output=False))
                 ]
 
             )
@@ -87,14 +86,23 @@ class DataTransformation:
             preprocessing_obj = self.get_data_transformation()
             
             target_column_name = 'income_above_limit'
-            cols_to_drop = ['id', 'class', 'education_institute', 'unemployment_reason', 'is_labor_union', 
+            cols_to_drop = ['ID', 'class', 'education_institute', 'unemployment_reason', 'is_labor_union', 
                             'occupation_code_main', 'under_18_family', 'veterans_admin_questionnaire', 
                             'residence_1_year_ago', 'old_residence_reg', 'old_residence_state',
                             "migration_code_change_in_msa","migration_prev_sunbelt","migration_code_move_within_reg",
                             "migration_code_change_in_reg", 'country_of_birth_own','country_of_birth_father','country_of_birth_mother',
                             'household_stat']
-            drop_columns = [target_column_name, cols_to_drop]
+            drop_columns = cols_to_drop + [target_column_name]
             
+            train_df.replace('?',np.nan,inplace=True)
+            test_df.replace('?',np.nan,inplace=True)
+
+            train_df['income_above_limit'] = train_df['income_above_limit'].map({'Below limit': 0, 'Above limit': 1})
+            test_df['income_above_limit'] = test_df['income_above_limit'].map({'Below limit': 0, 'Above limit': 1})
+
+            logging.info(f"unique values in income_above_limit column in train data: {train_df['income_above_limit'].unique()}")
+            logging.info(f"unique values in income_above_limit column in test data: {test_df['income_above_limit'].unique()}")
+
             input_feature_train_df = train_df.drop(columns=drop_columns,axis=1)
             target_feature_train_df=train_df[target_column_name]
             
@@ -110,6 +118,7 @@ class DataTransformation:
 
             smote = SMOTE(random_state=42)
             input_feature_train_arr, target_feature_train_df = smote.fit_resample(input_feature_train_arr, target_feature_train_df)
+
 
             logging.info("Resampling of the data completed using SMOTE.")
             
