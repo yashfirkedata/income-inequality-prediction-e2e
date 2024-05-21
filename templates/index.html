@@ -15,48 +15,133 @@
 
     <div class="form-group">
         <label for="gender">Gender:</label>
-        <input type="text" id="gender" name="gender" placeholder="Enter gender value (object)">
-    </div>
+        <select id="gender" name="gender">
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+        </select>
+    </div>    
 
     <div class="form-group">
         <label for="education">Education:</label>
-        <input type="text" id="education" name="education" placeholder="Enter education value (object)">
-    </div>
+        <select id="education" name="education">
+            <option value="High school graduate">High school graduate</option>
+            <option value="12th grade no diploma">12th grade no diploma</option>
+            <option value="Children">Children</option>
+            <option value="Bachelors degree(BA AB BS)">Bachelors degree(BA AB BS)</option>
+            <option value="7th and 8th grade">7th and 8th grade</option>
+            <option value="11th grade">11th grade</option>
+            <option value="9th grade">9th grade</option>
+            <option value="Masters degree(MA MS MEng MEd MSW MBA)">Masters degree(MA MS MEng MEd MSW MBA)</option>
+            <option value="10th grade">10th grade</option>
+            <option value="Associates degree-academic program">Associates degree-academic program</option>
+            <option value="1st 2nd 3rd or 4th grade">1st 2nd 3rd or 4th grade</option>
+            <option value="Some college but no degree">Some college but no degree</option>
+            <option value="Less than 1st grade">Less than 1st grade</option>
+            <option value="Associates degree-occup/vocational">Associates degree-occup/vocational</option>
+            <option value="Prof school degree (MD DDS DVM LLB JD)">Prof school degree (MD DDS DVM LLB JD)</option>
+            <option value="5th or 6th grade">5th or 6th grade</option>
+            <option value="Doctorate degree(PhD EdD)">Doctorate degree(PhD EdD)</option>
+        </select>
+    </div>    
 
     <div class="form-group">
         <label for="class">Class:</label>
-        <input type="text" id="class" name="class" placeholder="Enter class value (object)">
+        <select id="class" name="class">
+            <option value="">Select Class</option> <!-- This creates an initial empty option -->
+            <option value="Federal government">Federal government</option>
+            <option value="Private">Private</option>
+            <option value="Local government">Local government</option>
+            <option value="Self-employed-incorporated">Self-employed-incorporated</option>
+            <option value="Self-employed-not incorporated">Self-employed-not incorporated</option>
+            <option value="State government">State government</option>
+            <option value="Without pay">Without pay</option>
+            <option value="Never worked">Never worked</option>
+        </select>
     </div>
+    
 
     <div class="form-group">
         <label for="education_institute">Education Institute:</label>
-        <input type="text" id="education_institute" name="education_institute" placeholder="Enter education institute value (object)">
+        <select id="education_institute" name="education_institute">
+            <option value="">Select Education Institute</option> <!-- This creates an initial empty option -->
+            <option value="High school">High school</option>
+            <option value="College or university">College or university</option>
+        </select>
     </div>
+    
 
     <div class="form-group">
         <label for="marital_status">Marital Status:</label>
-        <input type="text" id="marital_status" name="marital_status" placeholder="Enter marital status value (object)">
+        <select id="marital_status" name="marital_status">
+            <option value="">Select Marital Status</option> <!-- This creates an initial empty option -->
+            <option value="Widowed">Widowed</option>
+            <option value="Never married">Never married</option>
+            <option value="Married-civilian spouse present">Married-civilian spouse present</option>
+            <option value="Divorced">Divorced</option>
+            <option value="Married-spouse absent">Married-spouse absent</option>
+            <option value="Separated">Separated</option>
+            <option value="Married-A F spouse present">Married-A F spouse present</option>
+        </select>
     </div>
+    
 
     <div class="form-group">
         <label for="race">Race:</label>
-        <input type="text" id="race" name="race" placeholder="Enter race value (object)">
+        <select id="race" name="race">
+            <option value="">Select Race</option> <!-- This creates an initial empty option -->
+            <option value="White">White</option>
+            <option value="Black">Black</option>
+            <option value="Asian or Pacific Islander">Asian or Pacific Islander</option>
+            <option value="Amer Indian Aleut or Eskimo">Amer Indian Aleut or Eskimo</option>
+            <option value="Other">Other</option>
+        </select>
     </div>
+    
 
     <div class="form-group">
         <label for="is_hispanic">Is Hispanic:</label>
-        <input type="text" id="is_hispanic" name="is_hispanic" placeholder="Enter is_hispanic value (object)">
+        <select id="is_hispanic" name="is_hispanic">
+            <option value="">Select Is Hispanic</option> <!-- This creates an initial empty option -->
+            <option value="All other">All other</option>
+            <option value="Mexican-American">Mexican-American</option>
+            <option value="Central or South American">Central or South American</option>
+            <option value="Mexican (Mexicano)">Mexican (Mexicano)</option>
+            <option value="Puerto Rican">Puerto Rican</option>
+            <option value="Other Spanish">Other Spanish</option>
+            <option value="NA">NA</option>
+            <option value="Cuban">Cuban</option>
+            <option value="Do not know">Do not know</option>
+            <option value="Chicano">Chicano</option>
+        </select>
     </div>
-
+    
     <div class="form-group">
         <label for="employment_commitment">Employment Commitment:</label>
-        <input type="text" id="employment_commitment" name="employment_commitment" placeholder="Enter employment commitment value (object)">
+        <select id="employment_commitment" name="employment_commitment">
+            <option value="">Select Employment Commitment</option> <!-- This creates an initial empty option -->
+            <option value="Not in labor force">Not in labor force</option>
+            <option value="Children or Armed Forces">Children or Armed Forces</option>
+            <option value="Full-time schedules">Full-time schedules</option>
+            <option value="PT for econ reasons usually PT">PT for econ reasons usually PT</option>
+            <option value="Unemployed full-time">Unemployed full-time</option>
+            <option value="PT for non-econ reasons usually FT">PT for non-econ reasons usually FT</option>
+            <option value="PT for econ reasons usually FT">PT for econ reasons usually FT</option>
+            <option value="Unemployed part-time">Unemployed part-time</option>
+        </select>
     </div>
-
+    
     <div class="form-group">
         <label for="unemployment_reason">Unemployment Reason:</label>
-        <input type="text" id="unemployment_reason" name="unemployment_reason" placeholder="Enter unemployment reason value (object)">
+        <select id="unemployment_reason" name="unemployment_reason">
+            <option value="">Select Unemployment Reason</option> <!-- This creates an initial empty option -->
+            <option value="Other job loser">Other job loser</option>
+            <option value="Re-entrant">Re-entrant</option>
+            <option value="Job leaver">Job leaver</option>
+            <option value="Job loser - on layoff">Job loser - on layoff</option>
+            <option value="New entrant">New entrant</option>
+        </select>
     </div>
+    
 
     <div class="form-group">
         <label for="employment_stat">Employment Stat:</label>
@@ -70,8 +155,13 @@
 
     <div class="form-group">
         <label for="is_labor_union">Is Labor Union:</label>
-        <input type="text" id="is_labor_union" name="is_labor_union" placeholder="Enter is labor union value (object)">
+        <select id="is_labor_union" name="is_labor_union">
+            <option value="">Select Is Labor Union</option> <!-- This creates an initial empty option -->
+            <option value="No">No</option>
+            <option value="Same">Same</option>
+        </select>
     </div>
+    
 
     <div class="form-group">
         <label for="working_week_per_year">Working Week Per Year:</label>
@@ -85,8 +175,35 @@
 
     <div class="form-group">
         <label for="industry_code_main">Industry Code Main:</label>
-        <input type="text" id="industry_code_main" name="industry_code_main" placeholder="Enter industry code main value (object)">
+        <select id="industry_code_main" name="industry_code_main">
+            <option value="">Select Industry Code Main</option> <!-- This creates an initial empty option -->
+            <option value="Not in universe or children">Not in universe or children</option>
+            <option value="Hospital services">Hospital services</option>
+            <option value="Retail trade">Retail trade</option>
+            <option value="Finance insurance and real estate">Finance insurance and real estate</option>
+            <option value="Manufacturing-nondurable goods">Manufacturing-nondurable goods</option>
+            <option value="Transportation">Transportation</option>
+            <option value="Business and repair services">Business and repair services</option>
+            <option value="Medical except hospital">Medical except hospital</option>
+            <option value="Education">Education</option>
+            <option value="Construction">Construction</option>
+            <option value="Manufacturing-durable goods">Manufacturing-durable goods</option>
+            <option value="Public administration">Public administration</option>
+            <option value="Agriculture">Agriculture</option>
+            <option value="Other professional services">Other professional services</option>
+            <option value="Mining">Mining</option>
+            <option value="Utilities and sanitary services">Utilities and sanitary services</option>
+            <option value="Private household services">Private household services</option>
+            <option value="Personal services except private HH">Personal services except private HH</option>
+            <option value="Wholesale trade">Wholesale trade</option>
+            <option value="Communications">Communications</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Social services">Social services</option>
+            <option value="Forestry and fisheries">Forestry and fisheries</option>
+            <option value="Armed Forces">Armed Forces</option>
+        </select>
     </div>
+    
 
     <div class="form-group">
         <label for="occupation_code">Occupation Code:</label>
@@ -95,8 +212,25 @@
 
     <div class="form-group">
         <label for="occupation_code_main">Occupation Code Main:</label>
-        <input type="text" id="occupation_code_main" name="occupation_code_main" placeholder="Enter occupation code main value (object)">
+        <select id="occupation_code_main" name="occupation_code_main">
+            <option value="">Select Occupation Code Main</option> <!-- This creates an initial empty option -->
+            <option value="Adm support including clerical">Adm support including clerical</option>
+            <option value="Other service">Other service</option>
+            <option value="Executive admin and managerial">Executive admin and managerial</option>
+            <option value="Sales">Sales</option>
+            <option value="Machine operators assmblrs & inspctrs">Machine operators assmblrs & inspctrs</option>
+            <option value="Precision production craft & repair">Precision production craft & repair</option>
+            <option value="Professional specialty">Professional specialty</option>
+            <option value="Handlers equip cleaners etc">Handlers equip cleaners etc</option>
+            <option value="Transportation and material moving">Transportation and material moving</option>
+            <option value="Farming forestry and fishing">Farming forestry and fishing</option>
+            <option value="Private household services">Private household services</option>
+            <option value="Technicians and related support">Technicians and related support</option>
+            <option value="Protective services">Protective services</option>
+            <option value="Armed Forces">Armed Forces</option>
+        </select>
     </div>
+    
 
     <div class="form-group">
         <label for="total_employed">Total Employed:</label>
@@ -105,23 +239,86 @@
 
     <div class="form-group">
         <label for="household_stat">Household Stat:</label>
-        <input type="text" id="household_stat" name="household_stat" placeholder="Enter household stat value (object)">
+        <select id="household_stat" name="household_stat">
+            <option value="Householder">Householder</option>
+            <option value="Nonfamily householder">Nonfamily householder</option>
+            <option value="Child 18+ never marr Not in a subfamily">Child 18+ never marr Not in a subfamily</option>
+            <option value="Child <18 never marr not in subfamily">Child <18 never marr not in subfamily</option>
+            <option value="Spouse of householder">Spouse of householder</option>
+            <option value="Child 18+ spouse of subfamily RP">Child 18+ spouse of subfamily RP</option>
+            <option value="Secondary individual">Secondary individual</option>
+            <option value="Child 18+ never marr RP of subfamily">Child 18+ never marr RP of subfamily</option>
+            <option value="Other Rel 18+ spouse of subfamily RP">Other Rel 18+ spouse of subfamily RP</option>
+            <option value="Grandchild <18 never marr not in subfamily">Grandchild <18 never marr not in subfamily</option>
+            <option value="Other Rel <18 never marr child of subfamily RP">Other Rel <18 never marr child of subfamily RP</option>
+            <option value="Other Rel 18+ ever marr RP of subfamily">Other Rel 18+ ever marr RP of subfamily</option>
+            <option value="Other Rel 18+ ever marr not in subfamily">Other Rel 18+ ever marr not in subfamily</option>
+            <option value="Child 18+ ever marr Not in a subfamily">Child 18+ ever marr Not in a subfamily</option>
+            <option value="RP of unrelated subfamily">RP of unrelated subfamily</option>
+            <option value="Child 18+ ever marr RP of subfamily">Child 18+ ever marr RP of subfamily</option>
+            <option value="Other Rel 18+ never marr not in subfamily">Other Rel 18+ never marr not in subfamily</option>
+            <option value="Child under 18 of RP of unrel subfamily">Child under 18 of RP of unrel subfamily</option>
+            <option value="Grandchild <18 never marr child of subfamily RP">Grandchild <18 never marr child of subfamily RP</option>
+            <option value="Grandchild 18+ never marr not in subfamily">Grandchild 18+ never marr not in subfamily</option>
+            <option value="Other Rel <18 never marr not in subfamily">Other Rel <18 never marr not in subfamily</option>
+            <option value="In group quarters">In group quarters</option>
+            <option value="Grandchild 18+ ever marr not in subfamily">Grandchild 18+ ever marr not in subfamily</option>
+            <option value="Other Rel 18+ never marr RP of subfamily">Other Rel 18+ never marr RP of subfamily</option>
+            <option value="Child <18 never marr RP of subfamily">Child <18 never marr RP of subfamily</option>
+            <option value="Grandchild 18+ never marr RP of subfamily">Grandchild 18+ never marr RP of subfamily</option>
+            <option value="Spouse of RP of unrelated subfamily">Spouse of RP of unrelated subfamily</option>
+            <option value="Grandchild 18+ ever marr RP of subfamily">Grandchild 18+ ever marr RP of subfamily</option>
+            <option value="Child <18 ever marr not in subfamily">Child <18 ever marr not in subfamily</option>
+            <option value="Child <18 ever marr RP of subfamily">Child <18 ever marr RP of subfamily</option>
+            <option value="Other Rel <18 ever marr RP of subfamily">Other Rel <18 ever marr RP of subfamily</option>
+            <option value="Grandchild 18+ spouse of subfamily RP">Grandchild 18+ spouse of subfamily RP</option>
+            <option value="Child <18 spouse of subfamily RP">Child <18 spouse of subfamily RP</option>
+            <option value="Other Rel <18 ever marr not in subfamily">Other Rel <18 ever marr not in subfamily</option>
+            <option value="Other Rel <18 never married RP of subfamily">Other Rel <18 never married RP of subfamily</option>
+            <option value="Other Rel <18 spouse of subfamily RP">Other Rel <18 spouse of subfamily RP</option>
+            <option value="Grandchild <18 ever marr not in subfamily">Grandchild <18 ever marr not in subfamily</option>
+            <option value="Grandchild <18 never marr RP of subfamily">Grandchild <18 never marr RP of subfamily</option>
+        </select>
     </div>
+    
 
     <div class="form-group">
         <label for="household_summary">Household Summary:</label>
-        <input type="text" id="household_summary" name="household_summary" placeholder="Enter household summary value (object)">
+        <select id="household_summary" name="household_summary">
+            <option value="">Select household summary</option>
+            <option value="Householder">Householder</option>
+            <option value="Child 18 or older">Child 18 or older</option>
+            <option value="Child under 18 never married">Child under 18 never married</option>
+            <option value="Spouse of householder">Spouse of householder</option>
+            <option value="Nonrelative of householder">Nonrelative of householder</option>
+            <option value="Other relative of householder">Other relative of householder</option>
+            <option value="Group Quarters- Secondary individual">Group Quarters- Secondary individual</option>
+            <option value="Child under 18 ever married">Child under 18 ever married</option>
+        </select>
     </div>
+    
 
     <div class="form-group">
         <label for="under_18_family">Under 18 Family:</label>
-        <input type="text" id="under_18_family" name="under_18_family" placeholder="Enter under 18 family value (object)">
+        <select id="under_18_family" name="under_18_family">
+            <option value="">Select under 18 family value</option>
+            <option value="Both parents present">Both parents present</option>
+            <option value="Mother only present">Mother only present</option>
+            <option value="Father only present">Father only present</option>
+            <option value="Neither parent present">Neither parent present</option>
+        </select>
     </div>
+    
 
     <div class="form-group">
         <label for="veterans_admin_questionnaire">Veterans Admin Questionnaire:</label>
-        <input type="text" id="veterans_admin_questionnaire" name="veterans_admin_questionnaire" placeholder="Enter veterans admin questionnaire value (object)">
+        <select id="veterans_admin_questionnaire" name="veterans_admin_questionnaire">
+            <option value="">Select veterans admin questionnaire value</option>
+            <option value="No">No</option>
+            <option value="Same">Same</option>
+        </select>
     </div>
+    
 
     <div class="form-group">
         <label for="vet_benefit">Vet Benefit:</label>
@@ -130,8 +327,17 @@
 
     <div class="form-group">
         <label for="tax_status">Tax Status:</label>
-        <input type="text" id="tax_status" name="tax_status" placeholder="Enter tax status value (object)">
+        <select id="tax_status" name="tax_status">
+            <option value="">Select tax status</option>
+            <option value="Head of household">Head of household</option>
+            <option value="Single">Single</option>
+            <option value="Nonfiler">Nonfiler</option>
+            <option value="Joint both 65+">Joint both 65+</option>
+            <option value="Joint both under 65">Joint both under 65</option>
+            <option value="Joint one under 65 & one 65+">Joint one under 65 & one 65+</option>
+        </select>
     </div>
+    
 
     <div class="form-group">
         <label for="gains">Gains:</label>
@@ -150,8 +356,16 @@
 
     <div class="form-group">
         <label for="citizenship">Citizenship:</label>
-        <input type="text" id="citizenship" name="citizenship" placeholder="Enter citizenship value (object)">
+        <select id="citizenship" name="citizenship">
+            <option value="">Select citizenship</option>
+            <option value="Native">Native</option>
+            <option value="Foreign born- Not a citizen of U S">Foreign born- Not a citizen of U S</option>
+            <option value="Foreign born- U S citizen by naturalization">Foreign born- U S citizen by naturalization</option>
+            <option value="Native- Born abroad of American Parent(s)">Native- Born abroad of American Parent(s)</option>
+            <option value="Native- Born in Puerto Rico or U S Outlying">Native- Born in Puerto Rico or U S Outlying</option>
+        </select>
     </div>
+    
 
     <div class="form-group">
         <label for="mig_year">Mig Year:</label>
@@ -160,53 +374,299 @@
 
     <div class="form-group">
         <label for="country_of_birth_own">Country of Birth (Own):</label>
-        <input type="text" id="country_of_birth_own" name="country_of_birth_own" placeholder="Enter country of birth (own) value (object)">
+        <select id="country_of_birth_own" name="country_of_birth_own">
+            <option value="">Select country of birth</option>
+            <option value="US">US</option>
+            <option value="?">?</option>
+            <option value="El-Salvador">El-Salvador</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Philippines">Philippines</option>
+            <option value="Cambodia">Cambodia</option>
+            <option value="China">China</option>
+            <option value="Hungary">Hungary</option>
+            <option value="Puerto-Rico">Puerto-Rico</option>
+            <option value="England">England</option>
+            <option value="Dominican-Republic">Dominican-Republic</option>
+            <option value="Japan">Japan</option>
+            <option value="Canada">Canada</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="Italy">Italy</option>
+            <option value="Cuba">Cuba</option>
+            <option value="Peru">Peru</option>
+            <option value="Taiwan">Taiwan</option>
+            <option value="South Korea">South Korea</option>
+            <option value="Poland">Poland</option>
+            <option value="Nicaragua">Nicaragua</option>
+            <option value="Germany">Germany</option>
+            <option value="Guatemala">Guatemala</option>
+            <option value="India">India</option>
+            <option value="Ireland">Ireland</option>
+            <option value="Honduras">Honduras</option>
+            <option value="France">France</option>
+            <option value="Trinadad&Tobago">Trinadad&Tobago</option>
+            <option value="Thailand">Thailand</option>
+            <option value="Iran">Iran</option>
+            <option value="Vietnam">Vietnam</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Laos">Laos</option>
+            <option value="Panama">Panama</option>
+            <option value="Scotland">Scotland</option>
+            <option value="Columbia">Columbia</option>
+            <option value="Jamaica">Jamaica</option>
+            <option value="Greece">Greece</option>
+            <option value="Haiti">Haiti</option>
+            <option value="Yugoslavia">Yugoslavia</option>
+            <option value="Outlying-U S (Guam USVI etc)">Outlying-U S (Guam USVI etc)</option>
+            <option value="Holand-Netherlands">Holand-Netherlands</option>
+            <option value="Hong Kong">Hong Kong</option>
+        </select>
     </div>
+    
 
     <div class="form-group">
         <label for="country_of_birth_father">Country of Birth (Father):</label>
-        <input type="text" id="country_of_birth_father" name="country_of_birth_father" placeholder="Enter country of birth (father) value (object)">
+        <select id="country_of_birth_father" name="country_of_birth_father">
+            <option value="">Select country of birth</option>
+            <option value="US">US</option>
+            <option value="India">India</option>
+            <option value="?">?</option>
+            <option value="Poland">Poland</option>
+            <option value="Germany">Germany</option>
+            <option value="El-Salvador">El-Salvador</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Puerto-Rico">Puerto-Rico</option>
+            <option value="Philippines">Philippines</option>
+            <option value="Greece">Greece</option>
+            <option value="Canada">Canada</option>
+            <option value="Ireland">Ireland</option>
+            <option value="Cambodia">Cambodia</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="China">China</option>
+            <option value="Hungary">Hungary</option>
+            <option value="Dominican-Republic">Dominican-Republic</option>
+            <option value="Japan">Japan</option>
+            <option value="Italy">Italy</option>
+            <option value="Cuba">Cuba</option>
+            <option value="Peru">Peru</option>
+            <option value="Jamaica">Jamaica</option>
+            <option value="South Korea">South Korea</option>
+            <option value="Yugoslavia">Yugoslavia</option>
+            <option value="Nicaragua">Nicaragua</option>
+            <option value="Columbia">Columbia</option>
+            <option value="Guatemala">Guatemala</option>
+            <option value="France">France</option>
+            <option value="England">England</option>
+            <option value="Iran">Iran</option>
+            <option value="Honduras">Honduras</option>
+            <option value="Haiti">Haiti</option>
+            <option value="Trinadad&Tobago">Trinadad&Tobago</option>
+            <option value="Outlying-U S (Guam USVI etc)">Outlying-U S (Guam USVI etc)</option>
+            <option value="Thailand">Thailand</option>
+            <option value="Vietnam">Vietnam</option>
+            <option value="Hong Kong">Hong Kong</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Laos">Laos</option>
+            <option value="Scotland">Scotland</option>
+            <option value="Taiwan">Taiwan</option>
+            <option value="Holand-Netherlands">Holand-Netherlands</option>
+            <option value="Panama">Panama</option>
+        </select>
     </div>
+    
 
     <div class="form-group">
         <label for="country_of_birth_mother">Country of Birth (Mother):</label>
-        <input type="text" id="country_of_birth_mother" name="country_of_birth_mother" placeholder="Enter country of birth (mother) value (object)">
+        <select id="country_of_birth_mother" name="country_of_birth_mother">
+            <option value="">Select country of birth</option>
+            <option value="US">US</option>
+            <option value="India">India</option>
+            <option value="?">?</option>
+            <option value="Peru">Peru</option>
+            <option value="Germany">Germany</option>
+            <option value="El-Salvador">El-Salvador</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Puerto-Rico">Puerto-Rico</option>
+            <option value="Philippines">Philippines</option>
+            <option value="Canada">Canada</option>
+            <option value="France">France</option>
+            <option value="Cambodia">Cambodia</option>
+            <option value="Italy">Italy</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="China">China</option>
+            <option value="Hungary">Hungary</option>
+            <option value="Dominican-Republic">Dominican-Republic</option>
+            <option value="Japan">Japan</option>
+            <option value="England">England</option>
+            <option value="Cuba">Cuba</option>
+            <option value="Poland">Poland</option>
+            <option value="South Korea">South Korea</option>
+            <option value="Yugoslavia">Yugoslavia</option>
+            <option value="Scotland">Scotland</option>
+            <option value="Nicaragua">Nicaragua</option>
+            <option value="Guatemala">Guatemala</option>
+            <option value="Holand-Netherlands">Holand-Netherlands</option>
+            <option value="Greece">Greece</option>
+            <option value="Ireland">Ireland</option>
+            <option value="Honduras">Honduras</option>
+            <option value="Haiti">Haiti</option>
+            <option value="Outlying-U S (Guam USVI etc)">Outlying-U S (Guam USVI etc)</option>
+            <option value="Trinadad&Tobago">Trinadad&Tobago</option>
+            <option value="Thailand">Thailand</option>
+            <option value="Jamaica">Jamaica</option>
+            <option value="Iran">Iran</option>
+            <option value="Vietnam">Vietnam</option>
+            <option value="Columbia">Columbia</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Laos">Laos</option>
+            <option value="Taiwan">Taiwan</option>
+            <option value="Hong Kong">Hong Kong</option>
+            <option value="Panama">Panama</option>
+        </select>
     </div>
+    
 
     <div class="form-group">
         <label for="migration_code_change_in_msa">Migration Code Change in MSA:</label>
-        <input type="text" id="migration_code_change_in_msa" name="migration_code_change_in_msa" placeholder="Enter migration code change in MSA value (object)">
+        <select id="migration_code_change_in_msa" name="migration_code_change_in_msa">
+            <option value="">Select migration code change in MSA</option>
+            <option value="?">?</option>
+            <option value="unchanged">unchanged</option>
+            <option value="MSA to MSA">MSA to MSA</option>
+            <option value="NonMSA to nonMSA">NonMSA to nonMSA</option>
+            <option value="MSA to nonMSA">MSA to nonMSA</option>
+            <option value="Not identifiable">Not identifiable</option>
+            <option value="NonMSA to MSA">NonMSA to MSA</option>
+            <option value="Abroad to MSA">Abroad to MSA</option>
+            <option value="Abroad to nonMSA">Abroad to nonMSA</option>
+        </select>
     </div>
-
+    
     <div class="form-group">
         <label for="migration_prev_sunbelt">Migration Prev Sunbelt:</label>
-        <input type="text" id="migration_prev_sunbelt" name="migration_prev_sunbelt" placeholder="Enter migration prev sunbelt value (object)">
+        <select id="migration_prev_sunbelt" name="migration_prev_sunbelt">
+            <option value="">Select migration prev sunbelt</option>
+            <option value="?">?</option>
+            <option value="No">No</option>
+            <option value="Same">Same</option>
+        </select>
     </div>
+    
 
     <div class="form-group">
         <label for="migration_code_move_within_reg">Migration Code Move Within Reg:</label>
-        <input type="text" id="migration_code_move_within_reg" name="migration_code_move_within_reg" placeholder="Enter migration code move within reg value (object)">
+        <select id="migration_code_move_within_reg" name="migration_code_move_within_reg">
+            <option value="">Select migration code move within reg</option>
+            <option value="?">?</option>
+            <option value="unchanged">unchanged</option>
+            <option value="Same county">Same county</option>
+            <option value="Different state in South">Different state in South</option>
+            <option value="Different county same state">Different county same state</option>
+            <option value="Different state in West">Different state in West</option>
+            <option value="Different state in Northeast">Different state in Northeast</option>
+            <option value="Abroad">Abroad</option>
+            <option value="Different state in Midwest">Different state in Midwest</option>
+        </select>
     </div>
+    
 
     <div class="form-group">
         <label for="migration_code_change_in_reg">Migration Code Change in Reg:</label>
-        <input type="text" id="migration_code_change_in_reg" name="migration_code_change_in_reg" placeholder="Enter migration code change in reg value (object)">
+        <select id="migration_code_change_in_reg" name="migration_code_change_in_reg">
+            <option value="">Select migration code change in reg</option>
+            <option value="?">?</option>
+            <option value="unchanged">unchanged</option>
+            <option value="Same county">Same county</option>
+            <option value="Different state same division">Different state same division</option>
+            <option value="Different county same state">Different county same state</option>
+            <option value="Different region">Different region</option>
+            <option value="Abroad">Abroad</option>
+            <option value="Different division same region">Different division same region</option>
+        </select>
     </div>
+    
 
     <div class="form-group">
         <label for="residence_1_year_ago">Residence 1 Year Ago:</label>
-        <input type="text" id="residence_1_year_ago" name="residence_1_year_ago" placeholder="Enter residence 1 year ago value (object)">
+        <select id="residence_1_year_ago" name="residence_1_year_ago">
+            <option value="">Select residence 1 year ago</option>
+            <option value="?">?</option>
+            <option value="Same">Same</option>
+            <option value="No">No</option>
+        </select>
     </div>
+    
 
     <div class="form-group">
         <label for="old_residence_reg">Old Residence Reg:</label>
-        <input type="text" id="old_residence_reg" name="old_residence_reg" placeholder="Enter old residence reg value (object)">
+        <select id="old_residence_reg" name="old_residence_reg">
+            <option value="">Select old residence reg</option>
+            <option value="?">?</option>
+            <option value="South">South</option>
+            <option value="Northeast">Northeast</option>
+            <option value="West">West</option>
+            <option value="Midwest">Midwest</option>
+            <option value="Abroad">Abroad</option>
+        </select>
     </div>
+    
 
     <div class="form-group">
         <label for="old_residence_state">Old Residence State:</label>
-        <input type="text" id="old_residence_state" name="old_residence_state" placeholder="Enter old residence state value (object)">
+        <select id="old_residence_state" name="old_residence_state">
+            <option value="">Select old residence state</option>
+            <option value="District of Columbia">District of Columbia</option>
+            <option value="Michigan">Michigan</option>
+            <option value="Florida">Florida</option>
+            <option value="Texas">Texas</option>
+            <option value="California">California</option>
+            <option value="North Carolina">North Carolina</option>
+            <option value="Arkansas">Arkansas</option>
+            <option value="Arizona">Arizona</option>
+            <option value="Ohio">Ohio</option>
+            <option value="Nebraska">Nebraska</option>
+            <option value="Oregon">Oregon</option>
+            <option value="Utah">Utah</option>
+            <option value="Oklahoma">Oklahoma</option>
+            <option value="Alaska">Alaska</option>
+            <option value="West Virginia">West Virginia</option>
+            <option value="Wisconsin">Wisconsin</option>
+            <option value="Wyoming">Wyoming</option>
+            <option value="South Carolina">South Carolina</option>
+            <option value="Maryland">Maryland</option>
+            <option value="Nevada">Nevada</option>
+            <option value="Minnesota">Minnesota</option>
+            <option value="North Dakota">North Dakota</option>
+            <option value="Louisiana">Louisiana</option>
+            <option value="Abroad">Abroad</option>
+            <option value="Kansas">Kansas</option>
+            <option value="New Jersey">New Jersey</option>
+            <option value="Tennessee">Tennessee</option>
+            <option value="Alabama">Alabama</option>
+            <option value="?">?</option>
+            <option value="Massachusetts">Massachusetts</option>
+            <option value="Indiana">Indiana</option>
+            <option value="Iowa">Iowa</option>
+            <option value="Vermont">Vermont</option>
+            <option value="Colorado">Colorado</option>
+            <option value="New Hampshire">New Hampshire</option>
+            <option value="New York">New York</option>
+            <option value="Idaho">Idaho</option>
+            <option value="Kentucky">Kentucky</option>
+            <option value="Pennsylvania">Pennsylvania</option>
+            <option value="New Mexico">New Mexico</option>
+            <option value="Mississippi">Mississippi</option>
+            <option value="Delaware">Delaware</option>
+            <option value="Illinois">Illinois</option>
+            <option value="Virginia">Virginia</option>
+            <option value="Montana">Montana</option>
+            <option value="South Dakota">South Dakota</option>
+            <option value="Connecticut">Connecticut</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Maine">Maine</option>
+            <option value="Missouri">Missouri</option>
+        </select>
     </div>
+    
 
     <div class="form-group">
         <label for="importance_of_record">Importance of Record:</label>
