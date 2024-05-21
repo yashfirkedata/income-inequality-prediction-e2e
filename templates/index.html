@@ -1,0 +1,220 @@
+<h1> Income Inequality Prediciton </h1>
+
+<html>
+<body>
+<form action="{{url_for('predict_datapoint')}}" method="POST">
+    <div class="form-group">
+        <label for="ID">ID:</label>
+        <input type="text" id="ID" name="ID" placeholder="Enter ID value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" placeholder="Enter age value (int)">
+    </div>
+
+    <div class="form-group">
+        <label for="gender">Gender:</label>
+        <input type="text" id="gender" name="gender" placeholder="Enter gender value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="education">Education:</label>
+        <input type="text" id="education" name="education" placeholder="Enter education value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="class">Class:</label>
+        <input type="text" id="class" name="class" placeholder="Enter class value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="education_institute">Education Institute:</label>
+        <input type="text" id="education_institute" name="education_institute" placeholder="Enter education institute value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="marital_status">Marital Status:</label>
+        <input type="text" id="marital_status" name="marital_status" placeholder="Enter marital status value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="race">Race:</label>
+        <input type="text" id="race" name="race" placeholder="Enter race value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="is_hispanic">Is Hispanic:</label>
+        <input type="text" id="is_hispanic" name="is_hispanic" placeholder="Enter is_hispanic value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="employment_commitment">Employment Commitment:</label>
+        <input type="text" id="employment_commitment" name="employment_commitment" placeholder="Enter employment commitment value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="unemployment_reason">Unemployment Reason:</label>
+        <input type="text" id="unemployment_reason" name="unemployment_reason" placeholder="Enter unemployment reason value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="employment_stat">Employment Stat:</label>
+        <input type="text" id="employment_stat" name="employment_stat" placeholder="Enter employment stat value (int)">
+    </div>
+
+    <div class="form-group">
+        <label for="wage_per_hour">Wage Per Hour:</label>
+        <input type="text" id="wage_per_hour" name="wage_per_hour" placeholder="Enter wage per hour value (int)">
+    </div>
+
+    <div class="form-group">
+        <label for="is_labor_union">Is Labor Union:</label>
+        <input type="text" id="is_labor_union" name="is_labor_union" placeholder="Enter is labor union value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="working_week_per_year">Working Week Per Year:</label>
+        <input type="text" id="working_week_per_year" name="working_week_per_year" placeholder="Enter working week per year value (int)">
+    </div>
+
+    <div class="form-group">
+        <label for="industry_code">Industry Code:</label>
+        <input type="text" id="industry_code" name="industry_code" placeholder="Enter industry code value (int)">
+    </div>
+
+    <div class="form-group">
+        <label for="industry_code_main">Industry Code Main:</label>
+        <input type="text" id="industry_code_main" name="industry_code_main" placeholder="Enter industry code main value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="occupation_code">Occupation Code:</label>
+        <input type="text" id="occupation_code" name="occupation_code" placeholder="Enter occupation code value (int)">
+    </div>
+
+    <div class="form-group">
+        <label for="occupation_code_main">Occupation Code Main:</label>
+        <input type="text" id="occupation_code_main" name="occupation_code_main" placeholder="Enter occupation code main value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="total_employed">Total Employed:</label>
+        <input type="text" id="total_employed" name="total_employed" placeholder="Enter total employed value (int)">
+    </div>
+
+    <div class="form-group">
+        <label for="household_stat">Household Stat:</label>
+        <input type="text" id="household_stat" name="household_stat" placeholder="Enter household stat value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="household_summary">Household Summary:</label>
+        <input type="text" id="household_summary" name="household_summary" placeholder="Enter household summary value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="under_18_family">Under 18 Family:</label>
+        <input type="text" id="under_18_family" name="under_18_family" placeholder="Enter under 18 family value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="veterans_admin_questionnaire">Veterans Admin Questionnaire:</label>
+        <input type="text" id="veterans_admin_questionnaire" name="veterans_admin_questionnaire" placeholder="Enter veterans admin questionnaire value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="vet_benefit">Vet Benefit:</label>
+        <input type="text" id="vet_benefit" name="vet_benefit" placeholder="Enter vet benefit value (int)">
+    </div>
+
+    <div class="form-group">
+        <label for="tax_status">Tax Status:</label>
+        <input type="text" id="tax_status" name="tax_status" placeholder="Enter tax status value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="gains">Gains:</label>
+        <input type="text" id="gains" name="gains" placeholder="Enter gains value (int)">
+    </div>
+
+    <div class="form-group">
+        <label for="losses">Losses:</label>
+        <input type="text" id="losses" name="losses" placeholder="Enter losses value (int)">
+    </div>
+
+    <div class="form-group">
+        <label for="stocks_status">Stocks Status:</label>
+        <input type="text" id="stocks_status" name="stocks_status" placeholder="Enter stocks status value (int)">
+    </div>
+
+    <div class="form-group">
+        <label for="citizenship">Citizenship:</label>
+        <input type="text" id="citizenship" name="citizenship" placeholder="Enter citizenship value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="mig_year">Mig Year:</label>
+        <input type="text" id="mig_year" name="mig_year" placeholder="Enter mig year value (int)">
+    </div>
+
+    <div class="form-group">
+        <label for="country_of_birth_own">Country of Birth (Own):</label>
+        <input type="text" id="country_of_birth_own" name="country_of_birth_own" placeholder="Enter country of birth (own) value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="country_of_birth_father">Country of Birth (Father):</label>
+        <input type="text" id="country_of_birth_father" name="country_of_birth_father" placeholder="Enter country of birth (father) value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="country_of_birth_mother">Country of Birth (Mother):</label>
+        <input type="text" id="country_of_birth_mother" name="country_of_birth_mother" placeholder="Enter country of birth (mother) value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="migration_code_change_in_msa">Migration Code Change in MSA:</label>
+        <input type="text" id="migration_code_change_in_msa" name="migration_code_change_in_msa" placeholder="Enter migration code change in MSA value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="migration_prev_sunbelt">Migration Prev Sunbelt:</label>
+        <input type="text" id="migration_prev_sunbelt" name="migration_prev_sunbelt" placeholder="Enter migration prev sunbelt value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="migration_code_move_within_reg">Migration Code Move Within Reg:</label>
+        <input type="text" id="migration_code_move_within_reg" name="migration_code_move_within_reg" placeholder="Enter migration code move within reg value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="migration_code_change_in_reg">Migration Code Change in Reg:</label>
+        <input type="text" id="migration_code_change_in_reg" name="migration_code_change_in_reg" placeholder="Enter migration code change in reg value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="residence_1_year_ago">Residence 1 Year Ago:</label>
+        <input type="text" id="residence_1_year_ago" name="residence_1_year_ago" placeholder="Enter residence 1 year ago value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="old_residence_reg">Old Residence Reg:</label>
+        <input type="text" id="old_residence_reg" name="old_residence_reg" placeholder="Enter old residence reg value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="old_residence_state">Old Residence State:</label>
+        <input type="text" id="old_residence_state" name="old_residence_state" placeholder="Enter old residence state value (object)">
+    </div>
+
+    <div class="form-group">
+        <label for="importance_of_record">Importance of Record:</label>
+        <input type="text" id="importance_of_record" name="importance_of_record" placeholder="Enter importance of record value (float)">
+    </div>
+
+    <div style="clear:both;"></div>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

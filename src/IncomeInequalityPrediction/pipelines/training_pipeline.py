@@ -46,6 +46,6 @@ class TrainingPipeline:
         except Exception as e:
             raise customexception(e,sys)
 
-if __name__=="__main__":
-    training_pipeline=TrainingPipeline()
-    training_pipeline.start_trainig()
+# if __name__=="__main__":
+#     training_pipeline=TrainingPipeline()
+#     training_pipeline.start_trainig()
