@@ -6,8 +6,9 @@ import mlflow
 import mlflow.sklearn
 import numpy as np
 import pickle
-from src.IncomeInequalityPrediction.utils.utils import load_object
-
+from src.IncomeInequalityPrediction.logger import logging
+from src.IncomeInequalityPrediction.exception import customexception
+from src.IncomeInequalityPrediction.utils.utils import save_object, load_object
 
 
 class ModelEvaluation:
@@ -21,6 +22,7 @@ class ModelEvaluation:
         recall = recall_score(actual, pred)
         f1 = f1_score(actual, pred)
         roc_auc = roc_auc_score(actual, pred)
+        logging.info("metrics calculated")
         return accuracy, precision, recall, f1, roc_auc
 
 
@@ -33,27 +35,33 @@ class ModelEvaluation:
 
         
 
-            mlflow.set_registry_uri("https://dagshub.com/sunny.savita/fsdsmendtoend.mlflow")
+            #mlflow.set_registry_uri("")
+
+            logging.info("model has registered")
             
             tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
             
             print(tracking_url_type_store)
 
 
-
+            logging.info('Model Evaluation Started - run started with MLFlow')
             with mlflow.start_run():
 
                 predicted_qualities = model.predict(X_test)
 
-                (rmse, mae, r2) = self.eval_metrics(y_test, predicted_qualities)
+                (accuracy, precision, recall, f1, roc_auc) = self.eval_metrics(y_test, predicted_qualities)
 
-                mlflow.log_metric("rmse", rmse)
-                mlflow.log_metric("r2", r2)
-                mlflow.log_metric("mae", mae)
+                mlflow.log_metric("accuracy", accuracy)
+                mlflow.log_metric("precision", precision)
+                mlflow.log_metric("recall", recall)
+                mlflow.log_metric("f1", f1)
+                mlflow.log_metric("roc_auc", roc_auc)
 
 
                 # this condition is for the dagshub
                 # Model registry does not work with file store
+                # if you set cloud location in the mlflow.set_registry_uri() then you wont get file in tracking_url_type_store therefore the condition is set.
+                # if you set file location in the mlflow.set_registry_uri() then it will not work
                 if tracking_url_type_store != "file":
 
                     # Register the model

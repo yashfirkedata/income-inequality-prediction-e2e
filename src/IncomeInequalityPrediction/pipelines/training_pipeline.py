@@ -37,15 +37,23 @@ class TrainingPipeline:
             model_trainer.initate_model_training(train_arr,test_arr)
         except Exception as e:
             raise customexception(e,sys)
+        
+    def start_model_evaluation(self,train_arr,test_arr):
+        try:
+            model_evaluation=ModelEvaluation()
+            model_evaluation.initiate_model_evaluation(train_arr,test_arr)
+        except Exception as e:
+            raise customexception(e,sys)
                 
-    def start_trainig(self):
+    def start_training(self):
         try:
             train_data_path,test_data_path=self.start_data_ingestion()
             train_arr,test_arr=self.start_data_transformation(train_data_path,test_data_path)
             self.start_model_training(train_arr,test_arr)
+            self.start_model_evaluation(train_arr,test_arr)
         except Exception as e:
             raise customexception(e,sys)
 
-# if __name__=="__main__":
-#     training_pipeline=TrainingPipeline()
-#     training_pipeline.start_trainig()
+if __name__=="__main__":
+    training_pipeline=TrainingPipeline()
+    training_pipeline.start_training()

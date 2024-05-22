@@ -1,0 +1,15 @@
+artifact_uri: file:///home/yashfirke/income-inequality-prediction-e2e/mlruns/0/0dd9b4dc236345afa4bc70db13a1624f/artifacts
+end_time: 1716367428997
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0dd9b4dc236345afa4bc70db13a1624f
+run_name: kindly-moth-252
+run_uuid: 0dd9b4dc236345afa4bc70db13a1624f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716367426477
+status: 3
+tags: []
+user_id: yashfirke

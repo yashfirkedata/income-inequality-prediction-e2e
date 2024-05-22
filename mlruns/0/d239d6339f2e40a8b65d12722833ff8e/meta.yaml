@@ -1,0 +1,15 @@
+artifact_uri: file:///home/yashfirke/income-inequality-prediction-e2e/mlruns/0/d239d6339f2e40a8b65d12722833ff8e/artifacts
+end_time: 1716367934579
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d239d6339f2e40a8b65d12722833ff8e
+run_name: zealous-foal-274
+run_uuid: d239d6339f2e40a8b65d12722833ff8e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716367932732
+status: 3
+tags: []
+user_id: yashfirke
