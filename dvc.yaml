@@ -1,0 +1,16 @@
+stages:
+  training:
+    cmd: python src/Inc /pipelines/training_pipeline.py
+    deps:
+      - src/IncomeInequalityPrediction/pipelines/training_pipeline.py
+      - src/ncomeInequalityPrediction/components/data_ingestion.py
+      - src/ncomeInequalityPrediction/components/data_transformation.py
+      - src/ncomeInequalityPrediction/components/model_trainer.py
+      - src/ncomeInequalityPrediction/components/model_evaluation.py
+
+    outs:
+      - artifacts/raw.csv
+      - artifacts/test.csv
+      - artifacts/train.csv
+      - artifacts/preprocessor.pkl
+      - artifacts/model.pkl
