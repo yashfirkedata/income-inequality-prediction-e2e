@@ -1,16 +1,47 @@
+# stages:
+#   training:
+#     cmd: python src/Inc /pipelines/training_pipeline.py
+#     deps:
+#       - src/IncomeInequalityPrediction/pipelines/training_pipeline.py
+#       - src/ncomeInequalityPrediction/components/data_ingestion.py
+#       - src/ncomeInequalityPrediction/components/data_transformation.py
+#       - src/ncomeInequalityPrediction/components/model_trainer.py
+#       - src/ncomeInequalityPrediction/components/model_evaluation.py
+
+#     outs:
+#       - artifacts/raw.csv
+#       - artifacts/test.csv
+#       - artifacts/train.csv
+#       - artifacts/preprocessor.pkl
+#       - artifacts/model.pkl
+
 stages:
-  training:
-    cmd: python src/Inc /pipelines/training_pipeline.py
+  data_ingestion:
+    cmd: python src/IncomeInequalityPrediction/components/data_ingestion.py
     deps:
       - src/IncomeInequalityPrediction/pipelines/training_pipeline.py
-      - src/ncomeInequalityPrediction/components/data_ingestion.py
-      - src/ncomeInequalityPrediction/components/data_transformation.py
-      - src/ncomeInequalityPrediction/components/model_trainer.py
-      - src/ncomeInequalityPrediction/components/model_evaluation.py
-
     outs:
       - artifacts/raw.csv
+
+  data_transformation:
+    cmd: python src/IncomeInequalityPrediction/components/data_transformation.py
+    deps:
+      - src/IncomeInequalityPrediction/components/data_ingestion.py
+    outs:
       - artifacts/test.csv
       - artifacts/train.csv
+
+  model_training:
+    cmd: python src/IncomeInequalityPrediction/components/model_trainer.py
+    deps:
+      - src/IncomeInequalityPrediction/components/data_transformation.py
+    outs:
       - artifacts/preprocessor.pkl
       - artifacts/model.pkl
+
+  model_evaluation:
+    cmd: python src/IncomeInequalityPrediction/components/model_evaluation.py
+    deps:
+      - src/IncomeInequalityPrediction/components/model_trainer.py
+    outs:
+      - artifacts/model_evaluation_results.csv
