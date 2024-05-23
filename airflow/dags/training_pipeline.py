@@ -83,8 +83,7 @@ with DAG(
     this task perform training
     """
     )
-    
-   
+ 
     push_data_to_s3_task = PythonOperator(
         task_id="push_data_to_s3",
         python_callable=push_data_to_s3
@@ -92,3 +91,4 @@ with DAG(
 
 
 data_ingestion_task >> data_transform_task >> model_trainer_task >> push_data_to_s3_task
+
