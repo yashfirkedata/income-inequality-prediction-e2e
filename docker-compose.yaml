@@ -4,19 +4,19 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile.airflow
-    image: airflowimage
-    container_name: incomeinequality-prediction-airflow
+    image: incomeinequality_airflow
+    container_name: incomeinequality_airflow
     ports:
       - "8080:8080"
     volumes:
-      - ./dags:/app/airflow/dags  # Mount DAGs directory
+      - ./airflow/dags:/app/airflow/dags  # Mount DAGs directory
 
-  flaskapp:
+  flask_app:
     build:
       context: ./
       dockerfile: Dockerfile.flask
-    image: flaskimage
-    container_name: incomeinequality-prediction-flask
+    image: incomeinequality_flask
+    container_name: incomeinequality_flask
     ports:
       - "80:80"
     depends_on:
