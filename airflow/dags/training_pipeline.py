@@ -41,7 +41,7 @@ with DAG(
         test_arr=np.array(data_transformation_artifact["test_arr"])
         training_pipeline.start_model_training(train_arr,test_arr)
     
-    ## you have to config azure blob
+    ## you can push the data to s3 bucket
     def push_data_to_s3(**kwargs):
         import os
         bucket_name="reposatiory_name"
