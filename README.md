@@ -1,11 +1,11 @@
 # Gemstone Price Prediction
 
-## Description
-```🏥 Getting a rapid understanding of the context of a patient’s overall health has been particularly important during the COVID-19 pandemic as healthcare workers around the world struggle with hospitals overloaded by patients in critical condition. Intensive Care Units (ICUs) often lack verified medical histories for incoming patients. A patient in distress or a patient who is brought in confused or unresponsive may not be able to provide information about chronic conditions such as heart disease, injuries, or diabetes. Medical records may take days to transfer, especially for a patient from another medical provider or system. Knowledge about chronic conditions can inform clinical decisions about patient care and ultimately improve patient's survival outcomes.```
+## Overview
+```🏥 Income inequality - when income is distributed in an uneven manner among a population, is a growing problem in developing nations across the world. With the rapid rise of AI and worker automation, this problem could continue to grow if steps are not taken to address the issue. This solution can potentially reduce the cost and improve the accuracy of monitoring key population indicators such as income level in between census years. This information will help policymakers to better manage and avoid income inequality globally```
 
 ## Problem Statement
 
-```📋 The target feature is hospital_death which is a binary variable. The task is to classify this variable based on the other 84 features step-by-step by going through each day's task. The scoring metric is Accuracy/Area under ROC curve.```
+```📋The central problem in this project is binary classification, specifically predicting whether an individual's income is above or below a certain predefined threshold. The target feature for this classification task is "income_above_limit." The project aims to build a machine learning model that can make these income predictions effectively. The evaluation metric chosen for assessing the model's performance is the F1-score, which is a balanced measure that takes both precision and recall into account. Achieving a high F1-score indicates that the model can make accurate predictions while minimizing false positives and false negatives..```
 
 ## Project setup:
 
